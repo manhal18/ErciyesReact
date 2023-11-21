@@ -1,7 +1,7 @@
 import  Header  from './components/Header.jsx';
 import { Route, Routes } from "react-router-dom"
 import DivEx from "./pages/DivEx.jsx"
-import Products from "./pages/Products"
+import Products from "./pages/Products.jsx"
 import NumbersList from './pages/NumbersList.jsx';
 import "./App.css"
 
