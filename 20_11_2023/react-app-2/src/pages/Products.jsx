@@ -11,7 +11,10 @@ export default function Products() {
   
   function deleteProduct(id){
     axios.delete(`https://northwind.vercel.app/api/products/${id}`)
-          .then(document.getElementById(id).remove())
+          .then(setProducts(
+            products.filter(item =>
+              item.id !== id
+            )))
   }
 
   function stock(){
@@ -55,7 +58,7 @@ export default function Products() {
           <tbody>
             {
               products.map((item) =>
-                <tr id={item.id} key={item.id}>
+                <tr key={item.id}>
                   <td>{item.id}</td>
                   <td style={{width:"250px"}}>{item.name}</td>
                   <td>{item.unitPrice}</td>
